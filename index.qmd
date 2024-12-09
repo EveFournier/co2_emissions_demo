@@ -119,7 +119,7 @@ table_df["Absolute_Change"] = table_df["2022"] - table_df["2000"]
 table_df["Relative_Change"] = (
     (table_df["2022"] - table_df["2000"]) / table_df["2000"] * 100
 )
-table_df
+
 ```
 
 
@@ -131,7 +131,7 @@ table_df
 # Round to 0 decimal places, and add a % sign to the relative change
 table_df["Relative_Change"] = table_df["Relative_Change"].round(0).astype(str) + "%"
 
-table_df
+
 ```
 Now we can display this as an interactive table with itables:
 
@@ -187,7 +187,7 @@ emissions_long_1990_2022
 emissions_long_subset = emissions_long_1990_2022.query(
     'country=="France" | country=="Switzerland" | country=="Germany" | country=="Italy" | country=="Spain"'
 )
-emissions_long_subset
+
 # emissions_long_subset
 
 
@@ -208,7 +208,7 @@ fig_chart = px.line(
     labels={"country": "Country", "year": "Year", "emissions": "CO2 emissions (tons)"},
 )
 
-fig_chart
+
 ```
 
 
